@@ -32,6 +32,8 @@ body
     font-family: 'Trebuchet MS', Arial, sans-serif;
     color: #181818;
     width: 100%;
+    max-width: 900px;
+    margin: auto;
 }
 
 #bloc_page
@@ -196,6 +198,10 @@ article
     margin-right: 8px;
 }
 
+article h1 {
+    text-align: left;
+}
+
 article p
 {
     font-size: 0.8em;
@@ -211,6 +217,10 @@ aside
     padding: 10px;
     color: white;
     font-size: 0.9em;
+}
+
+aside h1 {
+    text-align: center;
 }
 
 #fleche_bulle
@@ -257,17 +267,17 @@ footer h1
 
 #tweet
 {
-    width: 28%;
+    width: 30%;
 }
 
 #mes_photos
 {
-    width: 35%;
+    width: 40%;
 }
 
 #mes_amis
 {
-    width: 31%;
+    width: 30%;
 }
 
 #mes_photos img
@@ -286,11 +296,60 @@ footer h1
 #mes_amis ul
 {
     list-style-image: url('images/ico_liensexterne.png');
-    padding-left: 2px;
+    padding-left: 15px;
 }
 
 #mes_amis a
 {
     text-decoration: none;
     color: #760001;
+}
+
+@media only screen and (max-width: 300px) {
+    #titre_principal h2 {
+        margin-bottom: 0;
+    }
+    nav ul {
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+    
+    header, footer, section {
+        display: block;
+    }
+
+    #banniere_image {
+        display: none;
+    }
+
+    h1 img {
+        display:none;
+    }
+
+    article {
+        margin-right: 0;
+    }
+
+    #photo_zozor img {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 768px) {
+    nav ul {
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 10px;
+    }
+ 
+    footer, section {
+        display: block;
+    }
+
+    article {
+        margin-right: 0;
+    }
 }
